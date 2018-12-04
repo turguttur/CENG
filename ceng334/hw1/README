@@ -1,0 +1,65 @@
+HOMEWORK 1 - Asynchronous Hunter Prey Modeling:
+
+The objective of this assignment is to learn the basics of process management, IPC and polling.
+
+To run the program, write the following lines in terminal:
+	- make all
+	- ./server input
+
+Input is given in this format:
+<map_width> <map_height>
+<# of obstacles>
+<x coordinates of obstacle_1> <y coordinates of obstacle_1>
+<x coordinates of obstacle_2> <y coordinates of obstacle_2>
+...
+...
+<x coordinates of obstacle_n> <y coordinates of obstacle_n>
+<# of hunters>
+<x coordinates of hunter_1> <y coordinates of hunter_1> <energy of hunter_1>
+<x coordinates of hunter_2> <y coordinates of hunter_2> <energy of hunter_2>
+...
+...
+<x coordinates of hunter_n> <y coordinates of hunter_n> <energy of hunter_n>
+<# of prey>
+<x coordinates of prey_1> <y coordinates of prey_1> <energy of prey_1>
+<x coordinates of prey_2> <y coordinates of prey_2> <energy of prey_2>
+...
+...
+<x coordinates of prey_n> <y coordinates of prey_n> <energy of prey_n>
+
+Output of the server when printing the map should be in this format:
++<width # of - symbols>+
+|<row_0 contents>|
+|<row_1 contents>|
+|<row_2 contents>|
+...
+|<row_(height-1) contents>|
++<width # of - symbols>+
+
+Example input/output
+
+Input:
+10 10
+3
+2 8
+1 5
+2 2
+2
+3 5 5
+7 8 7
+2
+1 0 3
+6 2 2
+First output of this input:
++----------+
+|          |
+|P     X   |
+|   X      |
+|      H   |
+|          |
+|          | 
+|  P       |
+|        H |
+|  X       |
+|          |
++----------+
